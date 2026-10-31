@@ -5,6 +5,7 @@ class DisneyColors {
   static const fondo = Color(0xFF040714);
   static const tarjeta = Color(0xFF1A1D29);
   static const azul = Color(0xFF0063E5);
+  static const azulClaro = Color(0xFF4DA3FF);
   static const texto = Color(0xFFF9F9F9);
 }
 
@@ -36,6 +37,15 @@ ThemeData disneyTheme() {
       bodyMedium: GoogleFonts.roboto(fontSize: 14, color: Colors.white70),
       labelLarge: GoogleFonts.montserrat(
           fontSize: 14, fontWeight: FontWeight.w700, letterSpacing: 1.2),
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      filled: true,
+      fillColor: DisneyColors.tarjeta,
+      labelStyle: GoogleFonts.roboto(color: Colors.white70),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8),
+        borderSide: BorderSide.none,
+      ),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(

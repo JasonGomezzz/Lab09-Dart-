@@ -3,7 +3,9 @@ import 'imagen_nube.dart';
 
 class PosterCard extends StatelessWidget {
   final Map<String, String> pelicula;
-  const PosterCard({super.key, required this.pelicula});
+  /// Ancho fijo para carruseles; null para llenar la celda de una cuadrícula.
+  final double? ancho;
+  const PosterCard({super.key, required this.pelicula, this.ancho = 130});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +13,7 @@ class PosterCard extends StatelessWidget {
       onTap: () =>
           Navigator.pushNamed(context, '/detalle', arguments: pelicula),
       child: SizedBox(
-        width: 130,
+        width: ancho,
         child: Card(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
