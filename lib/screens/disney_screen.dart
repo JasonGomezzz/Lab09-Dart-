@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../data/peliculas.dart';
 import '../theme/disney_theme.dart';
+import '../widgets/imagen_nube.dart';
 import '../widgets/poster_card.dart';
 
 class DisneyScreen extends StatelessWidget {
@@ -63,10 +64,7 @@ class DisneyScreen extends StatelessWidget {
                 child: SizedBox(
                   width: 110,
                   height: 165,
-                  child: Image.network(p['imagen']!,
-                      fit: BoxFit.cover,
-                      errorBuilder: (_, _, _) =>
-                          const Center(child: Icon(Icons.movie))),
+                  child: ImagenNube(p['imagen']!),
                 ),
               ),
               const SizedBox(width: 14),
@@ -160,10 +158,7 @@ class DisneyScreen extends StatelessWidget {
                   child: SizedBox(
                     width: 48,
                     height: 72,
-                    child: Image.network(p['imagen']!,
-                        fit: BoxFit.cover,
-                        errorBuilder: (_, _, _) =>
-                            const Center(child: Icon(Icons.movie))),
+                    child: ImagenNube(p['imagen']!),
                   ),
                 ),
                 title: Text(p['titulo']!),

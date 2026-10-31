@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/imagen_nube.dart';
 
 class DetalleScreen extends StatelessWidget {
   const DetalleScreen({super.key});
@@ -14,11 +15,7 @@ class DetalleScreen extends StatelessWidget {
         children: [
           SizedBox(
             height: 420,
-            child: Image.network(p['imagen']!,
-                width: double.infinity,
-                fit: BoxFit.cover,
-                errorBuilder: (_, _, _) =>
-                    const Center(child: Icon(Icons.movie, size: 64))),
+            child: ImagenNube(p['imagen']!, width: double.infinity),
           ),
           Padding(
             padding: const EdgeInsets.all(16),

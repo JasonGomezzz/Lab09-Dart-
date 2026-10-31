@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'imagen_nube.dart';
 
 class PosterCard extends StatelessWidget {
   final Map<String, String> pelicula;
@@ -16,16 +17,7 @@ class PosterCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(
-                child: Image.network(
-                  pelicula['imagen']!,
-                  width: double.infinity,
-                  fit: BoxFit.cover,
-                  loadingBuilder: (c, child, p) => p == null
-                      ? child
-                      : const Center(child: CircularProgressIndicator()),
-                  errorBuilder: (c, e, s) =>
-                      const Center(child: Icon(Icons.broken_image)),
-                ),
+                child: ImagenNube(pelicula['imagen']!, width: double.infinity),
               ),
               Padding(
                 padding: const EdgeInsets.all(8),
