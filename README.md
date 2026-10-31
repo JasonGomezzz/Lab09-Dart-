@@ -31,19 +31,6 @@ catálogo con filtro por marca, buscador, descargas y perfil.
 - **Buscador**: filtra el catálogo por título, género, marca o año.
 - **Descargas**, **Perfil** y **Detalle** de cada película.
 
-## Capturas
-
-| | | |
-|---|---|---|
-| ![](docs/capturas/01-bienvenida.png) | ![](docs/capturas/02-planes.png) | ![](docs/capturas/03-aviso-demostracion.png) |
-| Bienvenida | Planes | Aviso de demostración |
-| ![](docs/capturas/04-login.png) | ![](docs/capturas/05-login-validacion.png) | ![](docs/capturas/06-inicio.png) |
-| Login | Validación | Inicio |
-| ![](docs/capturas/07-filtro-marvel.png) | ![](docs/capturas/08-filtro-pixar.png) | ![](docs/capturas/09-buscador.png) |
-| Filtro Marvel | Filtro Pixar | Buscador |
-| ![](docs/capturas/10-descargas.png) | ![](docs/capturas/11-perfil.png) | ![](docs/capturas/12-detalle.png) |
-| Descargas | Perfil | Detalle |
-
 ## Ejecutar
 
 ```bash
@@ -75,5 +62,4 @@ lib/
   screens/tabs/    inicio, buscar, descargas, perfil
   widgets/         PosterCard, ImagenNube, LogoDisney
 assets/images/     imágenes locales
-docs/capturas/     capturas de pantalla
 ```
