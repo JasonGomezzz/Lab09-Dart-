@@ -1,7 +1,11 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:streaming_app/main.dart';
+import 'package:streaming_app/widgets/imagen_nube.dart';
 
 void main() {
+  // Sin red en los tests: evita reintentos con temporizadores pendientes.
+  setUp(() => ImagenNube.maxIntentos = 0);
+
   testWidgets('Inicio navega a Disney+ y muestra sus secciones',
       (tester) async {
     await tester.pumpWidget(const StreamingApp());
