@@ -24,12 +24,14 @@ class DetalleScreen extends StatelessWidget {
               children: [
                 Text(p['titulo']!, style: tema.textTheme.headlineSmall),
                 const SizedBox(height: 4),
-                Text('${p['anio']} · ${p['genero']} · ${p['duracion']}',
+                Text('${p['marca']} · ${p['anio']} · ${p['genero']} · ${p['duracion']}',
                     style: tema.textTheme.bodyMedium),
                 const SizedBox(height: 16),
                 Row(children: [
                   ElevatedButton.icon(
-                      onPressed: () {},
+                      onPressed: () => ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                              content: Text('Demostración: sin reproducción'))),
                       icon: const Icon(Icons.play_arrow),
                       label: const Text('REPRODUCIR')),
                   const SizedBox(width: 12),
